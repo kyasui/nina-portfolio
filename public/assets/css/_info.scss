@@ -1,0 +1,217 @@
+.info {
+  position: relative;
+  min-height: 1040px;
+
+  margin-top: 60px;
+
+  @media screen and (max-width: $break-med) {
+    margin-top: 0;
+    min-height: 0;
+  }
+
+  &__content {
+    @extend .cf;
+    width: 645px;
+
+    border-top: 6px solid $purple;
+
+    position: absolute;
+
+    top: 675px;
+    left: 100px;
+
+    h4 {
+      color: $purple;
+      font-size: rem-calc(24px);
+      @include caslon-bold;
+      margin: 40px 0 30px;
+      letter-spacing: 1px;
+
+      @media screen and (max-width: $break-med) {
+        color: $dark-gray;
+      }
+    }
+
+    .column {
+      width: 25%;
+      float: left;
+      display: inline-block;
+
+      @media screen and (max-width: $break-small) {
+        width: 50%;
+      }
+    }
+
+    h5 {
+      color: $purple;
+      font-size: rem-calc(16px);
+      line-height: rem-calc(16px);
+      @include futura-normal;
+
+      margin: 0 0 15px 0;
+
+      @media screen and (max-width: $break-med) {
+        color: $dark-gray;
+      }
+    }
+
+    @media screen and (max-width: $break-med) {
+      position: static;
+      width: 90%;
+      padding: 0 5% 35px 5%;
+      border: none;
+
+      h4 {
+        margin: 0 0 30px 0;
+      }
+    }
+  }
+
+  &__headline {
+    font-size: rem-calc(90px);
+    line-height: rem-calc(94px);
+    @include caslon-bold-italic;
+    color: $dark-gray;
+
+    position: absolute;
+    top: 115px;
+    left: 100px;
+
+    width: 600px;
+
+    z-index: 1;
+
+    @media screen and (max-width: $break-med) {
+      position: static;
+      width: 90%;
+      padding: 6% 5% 5%;
+
+      text-align: center;
+
+      font-size: rem-calc(32px);
+      line-height: rem-calc(32px);
+    }
+  }
+
+  &__image {
+    float: right;
+    position: relative;
+    z-index: 0;
+
+    @media screen and (max-width: $break-med) {
+      float: none;
+      width: 100%;
+      margin: 0 auto;
+    }
+  }
+
+  &__skills-block-holder {
+    position: relative;
+
+    top: 295px;
+    right: 65px;
+
+    z-index: 2;
+
+    position: absolute;
+
+    .shadow {
+      content: "";
+      background: $purple;
+
+      position: absolute;
+      top: 15px;
+      left: 15px;
+      height: 100%;
+      width: 100%;
+      z-index: -1;
+    }
+
+    @media screen and (max-width: $break-med) {
+      position: static;
+      border: 0;
+      width: 90%;
+      padding: 5% 5% 35px 5%;
+
+      li {
+        display: inline-block;
+        float: left;
+        width: 25%;
+      }
+
+      .shadow {
+        display: none;
+      }
+    }
+  }
+
+  &__skills-block {
+    background: $white;
+    border: 6px solid $purple;
+
+    width: 140px;
+    padding: 20px 30px 10px;
+
+    h3 {
+      font-size: rem-calc(24px);
+      @include caslon-bold;
+      color: $purple;
+
+      letter-spacing: 1px;
+
+      margin: 0 0 10px 0;
+    }
+
+    li {
+      font-size: rem-calc(16px);
+      line-height: rem-calc(16px);
+      @include futura-normal;
+      color: $purple;
+
+      margin: 0 0 15px 0;
+    }
+
+    @media screen and (max-width: $break-med) {
+      position: static;
+      border: 0;
+      width: 100%;
+      padding: 0;
+
+      h3,
+      li {
+        color: $dark-gray;
+      }
+
+      padding-bottom: 25px;
+      border-bottom: 1px solid $med-gray;
+    }
+
+    @media screen and (max-width: $break-small) {
+      li {
+        width: 45%;
+        padding-right: 5%;
+      }
+
+    }
+  }
+
+  .section-bg {
+    background: $blog-gray;
+    position: absolute;
+
+    top: 285px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    width: 100%;
+
+    z-index: -1;
+
+    @include sprinkles;
+
+    @media screen and (max-width: $break-med) {
+      display: none;
+    }
+  }
+}

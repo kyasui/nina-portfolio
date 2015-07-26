@@ -1,0 +1,68 @@
+.main-header {
+  background: $light-gray;
+  padding: 20px 35px;
+
+  @extend .cf;
+
+  h1 {
+    @include futura-bold;
+    font-size: rem-calc(14px);
+    float: left;
+
+    a {
+      color: $dark-gray;
+
+      &:hover {
+        color: $purple;
+      }
+    }
+
+    @media screen and (max-width: $break-med) {
+      width: 100%;
+      clear: both;
+      text-align: center;
+      padding-bottom: 30px;
+    }
+  }
+
+  &__nav {
+    float: right;
+
+    @media screen and (max-width: $break-med) {
+      float: none;
+      width: 100%;
+      @extend .cf;
+    }
+  }
+
+  &__link {
+    padding: 0 14px;
+
+    color: $dark-gray;
+    font-size: rem-calc(14px);
+    @include futura-bold;
+    letter-spacing: 1px;
+
+    &:last-of-type {
+      padding-right: 0;
+    }
+
+    &:hover {
+      color: $purple;
+    }
+
+    @media screen and (max-width: $break-med) {
+      width: 33.3333333%;
+      text-align: center;
+      display: inline-block;
+      padding: 0;
+      float: left;
+    }
+  }
+
+  @media screen and (max-width: $break-med) {
+    .divider {
+      display: none;
+    }
+  }
+}

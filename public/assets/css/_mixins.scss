@@ -1,0 +1,98 @@
+// Futura
+
+@mixin futura-normal {
+  font-family: "futura-pt",sans-serif;
+  font-style: normal;
+  font-weight: 400;
+}
+
+@mixin futura-italic {
+  font-family: "futura-pt",sans-serif;
+  font-style: italic;
+  font-weight: 400;
+}
+
+@mixin futura-bold {
+  font-family: "futura-pt",sans-serif;
+  font-style: normal;
+  font-weight: 700;
+}
+
+@mixin futura-bold-italic {
+  font-family: "futura-pt",sans-serif;
+  font-style: italic;
+  font-weight: 700;
+}
+
+// Caslon
+
+@mixin caslon-normal {
+  font-family: "adobe-caslon-pro",serif;
+  font-style: normal;
+  font-weight: 400;
+}
+
+@mixin caslon-italic {
+  font-family: "adobe-caslon-pro",serif;
+  font-style: italic;
+  font-weight: 400;
+}
+
+@mixin caslon-bold {
+  font-family: "adobe-caslon-pro",serif;
+  font-style: normal;
+  font-weight: 700;
+}
+
+@mixin caslon-bold-italic {
+  font-family: "adobe-caslon-pro",serif;
+  font-style: italic;
+  font-weight: 700;
+}
+
+
+
+.cf {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin sprinkles {
+  background-image: url(../images/sprinkles.png);
+  background-repeat: repeat;
+}
+
+/*********************
+This is the default html
+and body font-size for the
+base rem value.
+*********************/
+
+$rem-base: 16px !default;
+
+/*********************
+REM CALC from Foundation
+*********************/
+
+@function strip-unit($num) {
+  @return $num / ($num * 0 + 1);
+}
+
+@function convert-to-rem($value, $base-value: $rem-base)  {
+  $value: strip-unit($value) / strip-unit($base-value) * 1rem;
+  @if ($value == 0rem) { $value: 0; } // Turn 0rem into 0
+  @return $value;
+}
+
+@function rem-calc($values, $base-value: $rem-base) {
+  $max: length($values);
+  @if $max == 1 { @return convert-to-rem(nth($values, 1), $base-value); }
+  $remValues: ();
+  @for $i from 1 through $max {
+    $remValues: append($remValues, convert-to-rem(nth($values, $i), $base-value));
+  }
+  @return $remValues;
+}

@@ -1,0 +1,220 @@
+.projects {
+  margin: 165px 0 620px 0;
+  padding-bottom: 100px;
+  position: relative;
+
+  @media screen and (max-width: $break-med) {
+    margin-top: 0;
+    padding-bottom: 0;
+  }
+
+  &__headline {
+    color: $purple;
+    @include futura-bold;
+    font-size: rem-calc(60px);
+    line-height: rem-calc(108px);
+
+    position: relative;
+    left: 30px;
+
+    margin: 0 0 160px 0;
+
+    span {
+      border-bottom: 8px solid $purple;
+    }
+
+    @media screen and (max-width: $break-med) {
+      left: 0;
+      padding: 5%;
+      margin: 0;
+      color: $white;
+    }
+
+    @media screen and (max-width: $break-small) {
+      font-size: rem-calc(30px);
+      line-height: rem-calc(54px);
+
+      span {
+        border-bottom: none;
+      }
+    }
+  }
+
+  &__row {
+    border-top: 6px solid $purple;
+    background: $white;
+    padding: 150px 150px 0;
+    margin: 0 30px 35px 30px;
+
+    @media screen and (max-width: $break-med) {
+      margin: 0;
+      padding-bottom: 35px;
+      padding-top: 35px;
+      padding-left: 5%;
+      padding-right: 5%;
+
+      &:first-of-type {
+        border-top: none;
+      }
+    }
+  }
+
+  .column {
+    float: left;
+    display: inline-block;
+    width: 23%;
+
+    @media screen and (max-width: $break-med) {
+      width: 50%;
+    }
+
+    @media screen and (max-width: $break-small) {
+      width: 100%;
+    }
+  }
+
+  .row-item {
+    margin: 0 0 50px 0;
+    padding: 0 0 50px 0;
+
+    border-bottom: 1px solid $med-gray;
+
+    position: relative;
+
+    @extend .cf;
+
+    &:last-of-type {
+      border-bottom: none;
+
+      @media screen and (max-width: $break-med) {
+        margin-bottom: 0;
+      }
+    }
+
+    @media screen and (max-width: $break-med) {
+      margin-bottom: 40px;
+      padding-bottom: 75px;
+      min-height: 0;
+    }
+
+    .date {
+      width: 10%;
+      float: left;
+      display: inline-block;
+
+      font-size: rem-calc(14px);
+      color: $med-gray;
+
+      @include futura-normal;
+
+      @media screen and (max-width: $break-med) {
+        width: 100%;
+        padding: 0 0 2% 0;
+      }
+    }
+
+    .content {
+      width: 40%;
+      float: left;
+      display: inline-block;
+
+      @media screen and (max-width: $break-med) {
+        width: 100%;
+      }
+
+      h4 {
+        @include futura-bold;
+        color: $dark-gray;
+        font-size: rem-calc(24px);
+        line-height: rem-calc(26px);
+        text-transform: uppercase;
+
+        margin: 0 0 5px 0;
+        padding: 0 85px 0 0;
+
+        @media screen and (max-width: $break-med) {
+          margin: 0 0 2% 0;
+        }
+      }
+
+      .meta {
+        font-size: rem-calc(14px);
+        color: $med-gray;
+
+        @include futura-normal;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+      }
+
+      a {
+        color: $purple;
+        text-transform: uppercase;
+        @include futura-bold;
+
+        @media screen and (max-width: $break-med) {
+          position: absolute;
+          bottom: 30px;
+          left: 0;
+          display: block;
+          width: 100%;
+        }
+
+        .icon {
+          width: 20px;
+          height: 20px;
+          display: inline-block;
+
+          background: url(../images/launch.svg) no-repeat center center;
+          background-size: 20px 20px;
+          margin: 0 0 0 5px;
+
+          position: relative;
+          top: 5px;
+        }
+
+        &:hover {
+          opacity: 0.8;
+        }
+      }
+    }
+
+    .description {
+      width: 50%;
+      float: left;
+      display: inline-block;
+
+      p {
+        margin-top: 3px;
+
+        @include caslon-normal;
+        font-size: rem-calc(18px);
+        line-height: rem-calc(28px);
+      }
+
+      @media screen and (max-width: $break-med) {
+        width: 100%;
+      }
+    }
+  }
+
+  .section-bg {
+    background: $dark-gray;
+    position: absolute;
+
+    top: 135px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    width: 100%;
+
+    z-index: -1;
+
+    @include sprinkles;
+
+    @media screen and (max-width: $break-med) {
+      top: 0;
+      background-image: none;
+    }
+  }
+}

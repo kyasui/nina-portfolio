@@ -1,0 +1,257 @@
+.blog-section {
+  margin-bottom: 620px;
+  padding-bottom: 100px;
+
+  @media screen and (max-width: $break-med) {
+    padding-bottom: 0;
+  }
+
+  .section-bg {
+    background: $blog-gray;
+    position: absolute;
+
+    top: 0;
+    left: 0;
+    right: 0;
+
+    width: 100%;
+    height: 285px;
+
+    z-index: -1;
+
+    @include sprinkles;
+
+    @media screen and (max-width: $break-med) {
+      top: 0;
+      background-image: none;
+      height: 165px;
+    }
+  }
+
+  .post {
+    position: relative;
+    margin-bottom: 45px;
+  }
+
+  &__headline {
+    color: $dark-gray;
+    @include futura-bold;
+    font-size: rem-calc(60px);
+    line-height: rem-calc(108px);
+
+    position: relative;
+
+    margin: 0 0 160px 0;
+    padding: 230px 0 0 0;
+
+    a {
+      color: $dark-gray;
+      border-bottom: 8px solid $dark-gray;
+    }
+
+    @media screen and (max-width: $break-med) {
+      left: 0;
+      padding: 5%;
+      margin: 0;
+      color: $white;
+    }
+
+    @media screen and (max-width: $break-small) {
+      font-size: rem-calc(30px);
+      line-height: rem-calc(54px);
+
+      span {
+        &:after {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .post-content-holder {
+    position: relative;
+
+    @media screen and (max-width: $break-med) {
+      padding-top: 45px;
+    }
+
+    .post-meta {
+      border-top: 4px solid $purple;
+
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 10%;
+      padding: 12px 0;
+
+      font-size: rem-calc(14px);
+      @include futura-bold;
+      color: $dark-gray;
+
+      @media screen and (max-width: $break-med) {
+        width: 90%;
+        margin: 0 5%;
+        float: none;
+        display: block;
+        position: static;
+        
+        border-top: 0;
+        border-bottom: 4px solid $purple;
+      }
+    }
+
+    .post-content {
+      p:not(.wp-caption-text) {
+        width: 75%;
+        padding-right: 5%;
+        padding-left: 20%;
+        float: left;
+        display: inline-block;
+
+        @media screen and (max-width: $break-med) {
+          width: 90%;
+          padding: 5% 5% 0 5%;
+          float: none;
+          display: block;
+        }
+      }
+
+      p + ul {
+        margin: -25px 0 45px;
+      }
+
+      ul {
+        @extend .cf;
+
+        width: 75%;
+        padding-right: 5%;
+        padding-left: 20%;
+        float: left;
+
+        margin-bottom: 45px;
+
+        @media screen and (max-width: $break-med) {
+          width: 90%;
+          padding: 5%;
+          float: none;
+          display: block;
+          list-style-position: inside;
+        }
+      }
+
+      .wp-caption {
+        margin: 45px 0 90px 0;
+        position: relative;
+        float: left;
+        display: inline-block;
+        width: 100% !important;
+
+        @extend .cf;
+
+        .wp-caption-text {
+          position: absolute;
+          width: 18%;
+          left: 0;
+          top: 0;
+          @include futura-bold;
+          color: $dark-gray;
+          text-align: right;
+          border-top: 4px solid $green;
+          padding: 12px 0 0 0;
+          text-transform: uppercase;
+          font-size: rem-calc(18px);
+
+          @media screen and (max-width: $break-med) {
+            width: 90%;
+            padding: 0%;
+            margin: 0 5%;
+            float: none;
+            display: block;
+            position: static;
+
+            border: none;
+            text-align: center;
+
+          }
+        }
+
+        img {
+          padding-left: 20%;
+          width: 75% !important;
+          height: auto !important;
+
+          @media screen and (max-width: $break-med) {
+            padding-left: 0 !important;
+            width: 100% !important;
+          }
+        }
+      }
+
+      > img.alignnone {
+        padding-left: 20%;
+        width: 75% !important;
+        height: auto !important;
+        margin: 45px 0 90px 0;
+
+        @media screen and (max-width: $break-med) {
+          padding-left: 0;
+          width: 100% !important;
+          height: auto !important;
+        }
+      }
+
+      p > img {
+        margin: 45px 0;
+      }
+
+      p > a,
+      li > a {
+        color: $dark-gray;
+        background: rgba(146, 133, 171, 0.5);
+      }
+
+      img {
+        @media screen and (max-width: $break-med) {
+          width: 100% !important;
+          height: auto !important;
+        }
+      }
+    }
+  }
+
+  p {
+    @include caslon-normal;
+    font-size: rem-calc(24px);
+    line-height: rem-calc(34px);
+    color: $dark-gray;
+    margin: 0 0 45px 0;
+  }
+
+  li {
+    @include caslon-normal;
+    font-size: rem-calc(24px);
+    line-height: rem-calc(34px);
+    color: $dark-gray;
+    margin: 0 0 15px 0;
+  }
+}
+
+.single-footer {
+  @extend .cf;
+  padding: 30px 0;
+
+  a {
+    @include futura-bold;
+    color: $purple;
+    text-transform: uppercase;
+  }
+
+  .prev {
+    float: left;
+  }
+
+  .next {
+    float: right;
+  }
+
+}

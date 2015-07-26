@@ -1,0 +1,19 @@
+.fluid-width {
+  max-width: 1170px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.site-intro {
+  &__headline {
+    font-size: rem-calc(20px);
+    @include futura-normal;
+    text-align: center;
+    color: $dark-gray;
+    text-transform: uppercase;
+    letter-spacing: .2px;
+
+    margin: 250px auto;
+    max-width: 620px;
+  }
+}

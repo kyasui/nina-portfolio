@@ -1,0 +1,146 @@
+.contact {
+  background: $light-gray;
+  position: fixed;
+
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: -1;
+
+  padding: 140px 0 100px;
+
+  @media screen and (max-width: $break-med) {
+    padding: 40px 0 0;
+  }
+
+  .contact-meta {
+    float: left;
+    display: inline-block;
+    width: 40%;
+    padding-left: 35px;
+
+
+    h3,
+    h4 {
+      color: $dark-gray;
+      @include caslon-normal;
+    }
+
+    h3 {
+      font-size: rem-calc(34px);
+      line-height: rem-calc(44px);
+    }
+
+    p {
+      @include caslon-normal;
+      font-size: rem-calc(20px);
+
+      @media screen and (max-width: $break-med) {
+        font-size: rem-calc(18px);
+        line-height: rem-calc(28px);
+      }
+    }
+
+    .link-text {
+      @include futura-normal;
+    }
+
+    a {
+      color: $alt-gray;
+
+      &:hover {
+        color: $purple;
+      }
+    }
+
+    @media screen and (max-width: $break-med) {
+      width: 90%;
+      float: none;
+      padding: 5%;
+    }
+  }
+
+  .links {
+    margin: 60px 0 0 0;
+
+    h5 {
+      @include futura-bold;
+      font-size: rem-calc(16px);
+    }
+
+    @media screen and (max-width: $break-med) {
+      margin: 20px 0 0 0;
+    }
+  }
+
+  .contact-content {
+    float: left;
+    display: inline-block;
+    width: 60%;
+
+    @media screen and (max-width: $break-med) {
+      width: 90%;
+      float: none;
+      padding: 0 5% 5%;
+    }
+
+    .socials {
+      position: absolute;
+      top: 0;
+      right: 100px;
+      width: 200px;
+
+      @extend .cf;
+
+      @media screen and (max-width: $break-med) {
+        position: static;
+
+        display: block;
+        width: 100%;
+
+        h5 {
+          text-align: left;
+          float: left;
+        }
+      }
+    }
+
+
+    .social-icon {
+      display: block;
+      @include futura-bold;
+      color: $dark-gray;
+      font-size: rem-calc(16px);
+
+      margin-bottom: 30px;
+
+      &:hover {
+        color: $purple;
+      }
+
+      @media screen and (max-width: $break-med) {
+        margin-bottom: 0;
+        display: inline-block;
+        width: 33%;
+        float: left;
+      }
+    }
+
+    h5 {
+      color: $dark-gray;
+      font-size: rem-calc(16px);
+      @include futura-normal;
+      text-align: left;
+      position: absolute;
+      bottom: 0;
+      right: 170px;
+
+      @media screen and (max-width: $break-med) {
+        position: static;
+        margin-top: 20px;
+      }
+    }
+  }
+
+}

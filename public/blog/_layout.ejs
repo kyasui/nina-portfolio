@@ -1,0 +1,74 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <!-- Place favicon.ico in the root directory -->
+
+        <link rel="stylesheet" href="/assets/css/main.css">
+        <script src="//use.typekit.net/ytg4glw.js"></script>
+        <script>try{Typekit.load();}catch(e){}</script>
+    </head>
+    <body>
+        <header class="main-header">
+          <div class="fluid-width">
+            <img src="/assets/images/nina-logo-small.png">
+            <nav class="main-header__nav">
+              <a class="main-header__link" href="/resume.pdf">RESUME</a><span class="divider">/</span>
+              <a class="main-header__link" href="mailto:hello@nina.com">Contact</a><span class="divider">/</span>
+              <a class="main-header__link" href="/blog">Blog</a>
+            </nav>
+          </div>
+        </header>
+
+        <!-- Add your site or application content here -->
+        <%- yield %>
+
+        <footer class="contact">
+          <div class="fluid-width cf">
+            <div class="logo-holder">
+              <img src="/assets/images/nina-logo.png">
+            </div>
+            <div class="contact-meta">
+              <h3>NINA HAZEN</h3>
+              <h3>Graphic Design & Illustration</h3>
+
+              <div class="links">
+                <h5>EMAIL <a class="link-text" href="mailto:hello@ninahazen.com">hello@ninahazen.com</a></h5>
+                <h5>WORKINGNOTWORKING <a class="link-text" target="_blank" href="https://www.workingnotworking.com/nina">/nina</a></h5>
+                <h5><a href="">RESUME</a> | <a href="">BLOG</a></h5>
+              </div>
+            </div>
+            <div class="contact-content">
+              <div class="socials">
+                <a class="social-icon instagram" href="">Instagram</a>
+                <a class="social-icon dribbble" href="">Dribbble</a>
+                <a class="social-icon pinterest" href="">Pinterest</a>
+                <a class="social-icon twitter" href="">Twitter</a>
+                <a class="social-icon linkedin" href="">LinkedIn</a>
+                <h5>&copy; 2015</h5>
+              </div>
+            </div>
+          </div>
+        </footer>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="assets/js/vendor/jquery-1.11.3.min.js"><\/script>')</script>
+        <script src="/assets/js/main.js"></script>
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='https://www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-XXXXX-X','auto');ga('send','pageview');
+        </script>
+    </body>
+</html>
